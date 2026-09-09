@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dipsie Commission — Custom Digital Artwork</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="logo" data-nav>
+      <span class="logo-mark">✦</span> Dipsie
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" data-nav>Home</a>
+      <a href="#commission" data-nav>Commission</a>
+      <a href="#pricing" data-nav>Pricing</a>
+      <a href="#gallery" data-nav>Gallery</a>
+      <a href="#faq" data-nav>FAQ</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" data-nav>Home</a>
+  <a href="#commission" data-nav>Commission</a>
+  <a href="#pricing" data-nav>Pricing</a>
+  <a href="#gallery" data-nav>Gallery</a>
+  <a href="#faq" data-nav>FAQ</a>
+  <a href="#contact" data-nav>Contact</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="floaters" aria-hidden="true">
+    <span class="float f1">✦</span>
+    <span class="float f2">✧</span>
+    <span class="float f3">✦</span>
+    <span class="float f4">✧</span>
+    <span class="float f5">✦</span>
+    <span class="brush b1"></span>
+    <span class="brush b2"></span>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Digital Illustration Studio</p>
+      <h1 class="hero-title">Bring Your<br>Imagination <em>to Life</em></h1>
+      <p class="hero-sub">Custom digital artwork made just for you — anime portraits, chibi companions, and full illustrations painted with care.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" data-scroll="#pricing">Commission Me</button>
+        <button class="btn btn-ghost" data-scroll="#gallery">View Gallery</button>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="art-card card-1">
+        <div class="art-blob blob-a"></div>
+        <span class="art-emoji">🎨</span>
+      </div>
+      <div class="art-card card-2">
+        <div class="art-blob blob-b"></div>
+        <span class="art-emoji">🖌️</span>
+      </div>
+      <div class="art-card card-3">
+        <div class="art-blob blob-c"></div>
+        <span class="art-emoji">💫</span>
+      </div>
+      <svg class="hero-swirl" viewBox="0 0 200 200" aria-hidden="true">
+        <path d="M20,100 C20,40 80,20 100,60 C120,100 160,90 170,50" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 8"/>
+      </svg>
+    </div>
+  </div>
+
+  <svg class="wave-divider" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,64 C240,120 480,10 720,48 C960,86 1200,20 1440,64 L1440,120 L0,120 Z"></path>
+  </svg>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about reveal" id="about">
+  <div class="about-inner">
+    <div class="about-portrait">
+      <div class="portrait-frame">
+        <span class="portrait-emoji">🌸</span>
+      </div>
+      <span class="portrait-sparkle s1">✦</span>
+      <span class="portrait-sparkle s2">✧</span>
+    </div>
+    <div class="about-text">
+      <p class="section-kicker">The Artist</p>
+      <h2>Hi, I'm Dipsie.</h2>
+      <p class="about-body">I'm a digital artist specializing in character illustrations, anime-inspired art, manhwa aesthetics, and semi-realistic portraits. Every commission is painted by hand, one layer at a time, with a soft palette and a lot of patience for detail.</p>
+      <p class="about-body">Whether you need a bouncy chibi of your OC or a moody portrait for a book cover, I'd love to help you bring it into the world.</p>
+      <ul class="about-stats">
+        <li><strong>250+</strong><span>Commissions completed</span></li>
+        <li><strong>4.9★</strong><span>Average client rating</span></li>
+        <li><strong>3–7 days</strong><span>Typical turnaround</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMMISSION TYPES ================= -->
+<section class="commission reveal" id="commission">
+  <div class="section-head">
+    <p class="section-kicker">Choose Your Commission</p>
+    <h2>What shall we create?</h2>
+    <p class="section-sub">Pick a commission type below — it carries straight through to your order form.</p>
+  </div>
+
+  <div class="commission-grid">
+    <article class="comm-card" data-type="chibi" data-price="35000">
+      <div class="comm-art">
+        <span class="comm-emoji">🧸</span>
+      </div>
+      <h3>Chibi</h3>
+      <p>Small, expressive and full of charm — perfect for icons and stickers.</p>
+      <p class="comm-price">from Rp35.000</p>
+      <button class="btn btn-choose" data-choose="chibi">Choose Chibi</button>
+    </article>
+
+    <article class="comm-card" data-type="halfbody" data-price="75000">
+      <div class="comm-art">
+        <span class="comm-emoji">🎭</span>
+      </div>
+      <h3>Half Body</h3>
+      <p>Waist-up portraits with detailed shading and expression work.</p>
+      <p class="comm-price">from Rp75.000</p>
+      <button class="btn btn-choose" data-choose="halfbody">Choose Half Body</button>
+    </article>
+
+    <article class="comm-card" data-type="fullbody" data-price="120000">
+      <div class="comm-art">
+        <span class="comm-emoji">🌟</span>
+      </div>
+      <h3>Full Body</h3>
+      <p>Complete illustrations with pose, outfit and background detail.</p>
+      <p class="comm-price">from Rp120.000</p>
+      <button class="btn btn-choose" data-choose="fullbody">Choose Full Body</button>
+    </article>
+  </div>
+</section>
+
+<!-- ================= ART STYLES ================= -->
+<section class="styles reveal" id="styles">
+  <div class="section-head">
+    <p class="section-kicker">Pick a Style</p>
+    <h2>Every artist has a few favorite brushes</h2>
+    <p class="section-sub">Select the style that fits your vision. This choice also updates your order form.</p>
+  </div>
+
+  <div class="style-grid">
+    <button class="style-card" data-style="anime">
+      <span class="style-emoji">🌙</span>
+      <h3>Anime</h3>
+      <p>Bright cel-shaded lines, expressive eyes, classic anime energy.</p>
+      <span class="style-check">✓</span>
+    </button>
+    <button class="style-card" data-style="manhwa">
+      <span class="style-emoji">🌺</span>
+      <h3>Manhwa</h3>
+      <p>Soft rendering, glowing skin tones, dreamy webtoon polish.</p>
+      <span class="style-check">✓</span>
+    </button>
+    <button class="style-card" data-style="semirealism">
+      <span class="style-emoji">🕊️</span>
+      <h3>Semi Realism</h3>
+      <p>Painterly detail with realistic lighting and soft stylization.</p>
+      <span class="style-check">✓</span>
+    </button>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="pricing reveal" id="pricing">
+  <div class="section-head">
+    <p class="section-kicker">Pricing</p>
+    <h2>Simple, transparent rates</h2>
+    <p class="section-sub">Build your quote with add-ons and see the total update live.</p>
+  </div>
+
+  <div class="pricing-layout">
+    <div class="pricing-cards">
+      <div class="price-card" data-type="chibi" data-price="35000">
+        <h3>Chibi</h3>
+        <p class="price-tag">Rp35.000</p>
+        <p class="price-note">Starting price</p>
+      </div>
+      <div class="price-card" data-type="halfbody" data-price="75000">
+        <h3>Half Body</h3>
+        <p class="price-tag">Rp75.000</p>
+        <p class="price-note">Starting price</p>
+      </div>
+      <div class="price-card" data-type="fullbody" data-price="120000">
+        <h3>Full Body</h3>
+        <p class="price-tag">Rp120.000</p>
+        <p class="price-note">Starting price</p>
+      </div>
+    </div>
+
+    <div class="calculator glass">
+      <h3 class="calc-title">Price Calculator</h3>
+
+      <label class="calc-label">Commission Type</label>
+      <select id="calcType" class="calc-select">
+        <option value="">Select a type…</option>
+        <option value="chibi" data-price="35000">Chibi — Rp35.000</option>
+        <option value="halfbody" data-price="75000">Half Body — Rp75.000</option>
+        <option value="fullbody" data-price="120000">Full Body — Rp120.000</option>
+      </select>
+
+      <label class="calc-label">Add-ons</label>
+      <div class="addons">
+        <label class="addon"><input type="checkbox" class="addon-check" value="30000" data-name="Additional Character"><span>Additional Character <em>+Rp30.000</em></span></label>
+        <label class="addon"><input type="checkbox" class="addon-check" value="25000" data-name="Detailed Background"><span>Detailed Background <em>+Rp25.000</em></span></label>
+        <label class="addon"><input type="checkbox" class="addon-check" value="50000" data-name="Commercial Use"><span>Commercial Use <em>+Rp50.000</em></span></label>
+        <label class="addon"><input type="checkbox" class="addon-check" value="15000" data-name="Extra Revision"><span>Extra Revision <em>+Rp15.000</em></span></label>
+      </div>
+
+      <div class="calc-summary">
+        <div class="summary-row"><span>Selected Commission</span><strong id="sumType">—</strong></div>
+        <div class="summary-row"><span>Selected Style</span><strong id="sumStyle">—</strong></div>
+        <div class="summary-row"><span>Add-ons</span><strong id="sumAddons">None</strong></div>
+        <div class="summary-row total"><span>Estimated Total</span><strong id="sumTotal">Rp0</strong></div>
+      </div>
+
+      <button class="btn btn-primary btn-block" data-scroll="#order">Continue to Order Form</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORDER FORM ================= -->
+<section class="order reveal" id="order">
+  <div class="section-head">
+    <p class="section-kicker">Order Form</p>
+    <h2>Let's make it official</h2>
+    <p class="section-sub">This is a frontend demo — submitting simulates sending your request. No data leaves your browser.</p>
+  </div>
+
+  <form class="order-form glass" id="commissionForm" novalidate>
+    <div class="form-grid">
+      <div class="field">
+        <label for="fName">Name <span class="req">*</span></label>
+        <input type="text" id="fName" name="name" placeholder="Your name">
+        <span class="error-msg" id="err-fName"></span>
+      </div>
+
+      <div class="field">
+        <label for="fEmail">Email <span class="req">*</span></label>
+        <input type="email" id="fEmail" name="email" placeholder="you@example.com">
+        <span class="error-msg" id="err-fEmail"></span>
+      </div>
+
+      <div class="field">
+        <label for="fType">Commission Type <span class="req">*</span></label>
+        <select id="fType" name="type">
+          <option value="">Select a type…</option>
+          <option value="chibi">Chibi — Rp35.000</option>
+          <option value="halfbody">Half Body — Rp75.000</option>
+          <option value="fullbody">Full Body — Rp120.000</option>
+        </select>
+        <span class="error-msg" id="err-fType"></span>
+      </div>
+
+      <div class="field">
+        <label for="fStyle">Art Style <span class="req">*</span></label>
+        <select id="fStyle" name="style">
+          <option value="">Select a style…</option>
+          <option value="anime">Anime</option>
+          <option value="manhwa">Manhwa</option>
+          <option value="semirealism">Semi Realism</option>
+        </select>
+        <span class="error-msg" id="err-fStyle"></span>
+      </div>
+
+      <div class="field">
+        <label for="fChars">Number of Characters</label>
+        <input type="number" id="fChars" name="characters" min="1" value="1">
+      </div>
+
+      <div class="field field-wide">
+        <label>Add-ons</label>
+        <div class="addons addons-form">
+          <label class="addon"><input type="checkbox" class="form-addon-check" value="30000" data-name="Additional Character"><span>Additional Character</span></label>
+          <label class="addon"><input type="checkbox" class="form-addon-check" value="25000" data-name="Detailed Background"><span>Detailed Background</span></label>
+          <label class="addon"><input type="checkbox" class="form-addon-check" value="50000" data-name="Commercial Use"><span>Commercial Use</span></label>
+          <label class="addon"><input type="checkbox" class="form-addon-check" value="15000" data-name="Extra Revision"><span>Extra Revision</span></label>
+        </div>
+      </div>
+
+      <div class="field field-wide">
+        <label for="fDesc">Character Description <span class="req">*</span></label>
+        <textarea id="fDesc" name="description" rows="3" placeholder="Hair, outfit, colors, personality — anything that helps me picture them"></textarea>
+        <span class="error-msg" id="err-fDesc"></span>
+      </div>
+
+      <div class="field field-wide">
+        <label for="fPose">Pose / Expression</label>
+        <textarea id="fPose" name="pose" rows="2" placeholder="e.g. Sitting, gentle smile, looking over shoulder"></textarea>
+      </div>
+
+      <div class="field field-wide">
+        <label for="fNotes">Additional Notes</label>
+        <textarea id="fNotes" name="notes" rows="2" placeholder="Anything else I should know?"></textarea>
+      </div>
+
+      <div class="field field-wide">
+        <label for="fRef">Reference Image URL</label>
+        <input type="text" id="fRef" name="reference" placeholder="https://…">
+      </div>
+    </div>
+
+    <div class="form-summary">
+      <div class="summary-row"><span>Selected Commission</span><strong id="formSumType">—</strong></div>
+      <div class="summary-row"><span>Selected Style</span><strong id="formSumStyle">—</strong></div>
+      <div class="summary-row"><span>Add-ons</span><strong id="formSumAddons">None</strong></div>
+      <div class="summary-row total"><span>Estimated Total</span><strong id="formSumTotal">Rp0</strong></div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn btn-ghost" id="calcPriceBtn">Calculate Price</button>
+      <button type="submit" class="btn btn-primary">Submit Commission</button>
+    </div>
+    <p class="form-disclaimer">✦ Demo only — no backend is connected. Your info stays in this browser tab.</p>
+  </form>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery reveal" id="gallery">
+  <div class="section-head">
+    <p class="section-kicker">Gallery</p>
+    <h2>A peek into the sketchbook</h2>
+    <p class="section-sub">Placeholder pieces representing past commission styles.</p>
+  </div>
+
+  <div class="gallery-filters" id="galleryFilters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="anime">Anime</button>
+    <button class="filter-btn" data-filter="manhwa">Manhwa</button>
+    <button class="filter-btn" data-filter="semirealism">Semi Realism</button>
+    <button class="filter-btn" data-filter="chibi">Chibi</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid"><!-- populated by JS --></div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq reveal" id="faq">
+  <div class="section-head">
+    <p class="section-kicker">FAQ</p>
+    <h2>Good to know</h2>
+  </div>
+
+  <div class="faq-list" id="faqList">
+    <div class="faq-item">
+      <button class="faq-question">
+        How long does a commission take?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><p>Most pieces are finished within 3–7 days depending on complexity and my current queue. You'll get a rough timeline when your commission is confirmed.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        How many revisions are included?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><p>Every commission includes one round of sketch approval and one round of color revisions. Extra revisions can be added with the Extra Revision add-on.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Can I request a specific pose?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><p>Absolutely — describe it in the Pose / Expression field, or attach a reference link. I'll always confirm the sketch with you before rendering.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        Do you accept commercial commissions?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><p>Yes! Select the Commercial Use add-on when ordering so the license and pricing are set up correctly from the start.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        How do I receive the final artwork?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><p>You'll receive a high-resolution file by email once payment is confirmed, along with a watermarked preview beforehand.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER / CONTACT ================= -->
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="footer-logo"><span class="logo-mark">✦</span> Dipsie Commission</p>
+      <p class="footer-tag">Custom art made with love ✦</p>
+    </div>
+
+    <div class="footer-links">
+      <p class="footer-heading">Find me</p>
+      <div class="social-row">
+        <a href="#" class="social-btn" data-social="Instagram">Instagram</a>
+        <a href="#" class="social-btn" data-social="Twitter / X">Twitter / X</a>
+        <a href="#" class="social-btn" data-social="TikTok">TikTok</a>
+        <a href="mailto:hello@dipsiecommission.example" class="social-btn" data-social="Email">Email</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Dipsie Commission. Frontend demo — all commissions simulated for portfolio purposes.</p>
+  </div>
+</footer>
+
+<!-- ================= BACK TO TOP ================= -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<!-- ================= CHAT WIDGET ================= -->
+<button class="chat-fab" id="chatFab" aria-label="Open chat">💬</button>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <span>Dipsie Admin 💬</span>
+    <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg admin">Hi! 👋 How can I help you with your commission?</div>
+    <div class="chat-quick" id="chatQuick">
+      <button data-q="pricing">Ask about pricing</button>
+      <button data-q="status">Ask about commission status</button>
+      <button data-q="revisions">Ask about revisions</button>
+      <button data-q="other">Other question</button>
+    </div>
+  </div>
+  <form class="chat-input-row" id="chatForm">
+    <input type="text" id="chatInput" placeholder="Type a message…" autocomplete="off">
+    <button type="submit" aria-label="Send">➤</button>
+  </form>
+</div>
+
+<!-- ================= LIGHTBOX MODAL ================= -->
+<div class="modal-overlay" id="lightboxOverlay">
+  <div class="modal lightbox-modal">
+    <button class="modal-close" id="lightboxClose" aria-label="Close">✕</button>
+    <div class="lightbox-art" id="lightboxArt"></div>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
+<!-- ================= CONFIRMATION MODAL ================= -->
+<div class="modal-overlay" id="confirmOverlay">
+  <div class="modal confirm-modal">
+    <button class="modal-close" id="confirmClose" aria-label="Close">✕</button>
+    <div class="confirm-icon">🎨</div>
+    <h3>Commission Request Sent!</h3>
+    <p class="confirm-sub">Thank you! This is a frontend simulation — in a live version, Dipsie would receive your request now.</p>
+    <div class="confirm-details">
+      <div class="summary-row"><span>Commission</span><strong id="confType">—</strong></div>
+      <div class="summary-row"><span>Style</span><strong id="confStyle">—</strong></div>
+      <div class="summary-row total"><span>Estimated Price</span><strong id="confPrice">Rp0</strong></div>
+    </div>
+    <p class="confirm-note">I'll reach out at the email you provided within 1–2 days to confirm details and next steps. ✦</p>
+    <button class="btn btn-primary btn-block" id="confirmDone">Sounds good!</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
