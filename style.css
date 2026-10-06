@@ -16,16 +16,16 @@
     --navy-soft:     #5A5580;
     --white:         #FFFFFF;
     --line:          rgba(42, 38, 80, 0.1);
-  
+
     /* --- Gradients --- */
     --grad-hero: radial-gradient(120% 120% at 20% 20%, #F3E9FF 0%, #E4EBFC 45%, #FAF8FE 100%);
     --grad-btn:  linear-gradient(120deg, var(--lavender-deep), var(--blue-deep));
     --grad-card: linear-gradient(160deg, #FFFFFF 0%, #F6F1FE 100%);
-  
+
     /* --- Type --- */
     --font-display: 'Fraunces', serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
-  
+
     /* --- Shadow / radius --- */
     --shadow-soft: 0 20px 45px -20px rgba(80, 60, 140, 0.28);
     --shadow-card: 0 14px 30px -16px rgba(80, 60, 140, 0.22);
@@ -33,22 +33,22 @@
     --radius-md: 18px;
     --radius-sm: 12px;
   }
-  
+
   /* ============================================================
      RESET & BASE
      ============================================================ */
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
   }
-  
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   }
-  
+
   body {
     font-family: var(--font-body);
     color: var(--navy);
@@ -56,34 +56,34 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
-  
+
   img { max-width: 100%; display: block; }
-  
+
   a { color: inherit; text-decoration: none; }
-  
+
   button, input, select, textarea {
     font-family: inherit;
     font-size: 1rem;
     color: inherit;
   }
-  
+
   button { cursor: pointer; border: none; background: none; }
-  
+
   h1, h2, h3 { font-family: var(--font-display); font-weight: 600; color: var(--navy); }
-  
+
   .glass {
     background: rgba(255, 255, 255, 0.72);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgba(255, 255, 255, 0.6);
   }
-  
+
   :focus-visible {
     outline: 3px solid var(--blue-deep);
     outline-offset: 3px;
     border-radius: 4px;
   }
-  
+
   /* ============================================================
      SECTION HEAD (reused pattern)
      ============================================================ */
@@ -105,9 +105,9 @@
     margin-bottom: 0.7rem;
   }
   .section-sub { color: var(--navy-soft); font-size: 1.02rem; }
-  
+
   section { padding: 6rem 1.5rem; position: relative; }
-  
+
   /* ============================================================
      BUTTONS
      ============================================================ */
@@ -123,23 +123,23 @@
     transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
   }
   .btn:active { transform: scale(0.96); }
-  
+
   .btn-primary {
     background: var(--grad-btn);
     color: #fff;
     box-shadow: 0 12px 24px -10px rgba(95, 75, 200, 0.55);
   }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -10px rgba(95, 75, 200, 0.6); }
-  
+
   .btn-ghost {
     background: transparent;
     color: var(--navy);
     border: 1.5px solid var(--line);
   }
   .btn-ghost:hover { border-color: var(--lavender-deep); background: rgba(201, 182, 238, 0.12); transform: translateY(-2px); }
-  
+
   .btn-block { width: 100%; margin-top: 1rem; }
-  
+
   .btn-choose {
     margin-top: 1.1rem;
     width: 100%;
@@ -153,7 +153,7 @@
   .btn-choose:hover { background: var(--grad-btn); color: #fff; transform: translateY(-2px); }
   .btn-choose.chosen { background: var(--grad-btn); color: #fff; }
   .btn-choose.chosen::after { content: " ✓"; }
-  
+
   /* ============================================================
      NAVBAR
      ============================================================ */
@@ -187,7 +187,7 @@
     color: var(--navy);
   }
   .logo-mark { color: var(--lavender-deep); }
-  
+
   .nav-links { display: flex; gap: 2rem; }
   .nav-links a {
     font-size: 0.95rem;
@@ -208,7 +208,7 @@
   }
   .nav-links a:hover { color: var(--navy); }
   .nav-links a:hover::after { width: 100%; }
-  
+
   .hamburger {
     display: none;
     flex-direction: column;
@@ -227,7 +227,7 @@
   .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-  
+
   .mobile-menu {
     position: fixed;
     inset: 0;
@@ -254,7 +254,7 @@
     font-size: 1.6rem;
     color: var(--navy);
   }
-  
+
   /* ============================================================
      HERO
      ============================================================ */
@@ -318,7 +318,7 @@
     gap: 1rem;
     flex-wrap: wrap;
   }
-  
+
   /* hero art cluster */
   .hero-art { position: relative; height: 420px; }
   .art-card {
@@ -333,10 +333,22 @@
     font-size: 3rem;
     animation: bob 6s ease-in-out infinite;
   }
+
+  /* Artwork images inside the floating cards */
+  .art-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-lg);
+    position: relative;
+    z-index: 2;
+  }
+
   .art-card.card-1 { top: 6%; left: 14%; animation-delay: 0s; }
   .art-card.card-2 { top: 40%; right: 4%; width: 130px; height: 130px; animation-delay: 1.2s; }
   .art-card.card-3 { bottom: 4%; left: 24%; width: 115px; height: 115px; animation-delay: 2.4s; }
-  
+
   .art-blob {
     position: absolute;
     inset: -14px;
@@ -348,7 +360,7 @@
   .blob-a { background: var(--lavender); }
   .blob-b { background: var(--blue); }
   .blob-c { background: var(--pink); }
-  
+
   .hero-swirl {
     position: absolute;
     width: 130px; height: 130px;
@@ -356,12 +368,12 @@
     color: var(--lavender-deep);
     opacity: 0.55;
   }
-  
+
   @keyframes bob {
     0%, 100% { transform: translateY(0) rotate(-1.5deg); }
     50% { transform: translateY(-14px) rotate(1.5deg); }
   }
-  
+
   /* floating stars */
   .floaters { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
   .float {
@@ -375,12 +387,12 @@
   .f3 { top: 20%; left: 48%; font-size: 0.9rem; animation-delay: 3s; }
   .f4 { top: 85%; left: 45%; font-size: 1.2rem; animation-delay: 4.5s; color: var(--pink); }
   .f5 { top: 5%;  left: 90%; font-size: 1.1rem; animation-delay: 2s; }
-  
+
   @keyframes drift {
     0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
     50% { transform: translateY(-18px) scale(1.15); opacity: 0.9; }
   }
-  
+
   .brush {
     position: absolute;
     border-radius: 50%;
@@ -388,7 +400,7 @@
   }
   .b1 { width: 8px; height: 8px; background: var(--blue-deep); top: 30%; left: 20%; }
   .b2 { width: 6px; height: 6px; background: var(--pink); top: 60%; left: 55%; }
-  
+
   .wave-divider {
     display: block;
     width: 100%;
@@ -396,7 +408,7 @@
     color: var(--bg);
     fill: var(--bg);
   }
-  
+
   /* ============================================================
      ABOUT
      ============================================================ */
@@ -422,7 +434,7 @@
   .portrait-sparkle { position: absolute; color: var(--lavender-deep); font-size: 1.4rem; animation: drift 7s ease-in-out infinite; }
   .s1 { top: -6%; right: -2%; }
   .s2 { bottom: 4%; left: -8%; color: var(--blue-deep); animation-delay: 2s; }
-  
+
   .about-text h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 1.1rem; }
   .about-body { color: var(--navy-soft); margin-bottom: 0.9rem; max-width: 62ch; }
   .about-stats {
@@ -435,7 +447,7 @@
   .about-stats li { display: flex; flex-direction: column; }
   .about-stats strong { font-family: var(--font-display); font-size: 1.5rem; color: var(--lavender-deep); }
   .about-stats span { font-size: 0.85rem; color: var(--navy-soft); }
-  
+
   /* ============================================================
      COMMISSION CARDS
      ============================================================ */
@@ -467,7 +479,7 @@
   .comm-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
   .comm-card p { color: var(--navy-soft); font-size: 0.95rem; }
   .comm-price { margin-top: 0.9rem; font-weight: 700; color: var(--lavender-deep); font-size: 1.1rem; }
-  
+
   /* ============================================================
      STYLE CARDS
      ============================================================ */
@@ -509,10 +521,9 @@
     align-items: center; justify-content: center;
   }
   .style-card.selected .style-check { display: flex; }
-  
+
   /* ============================================================
-     PRICING
-     ============================================================ */
+     PRICING */
   .pricing { background: var(--bg-alt); }
   .pricing-layout {
     max-width: 1100px;
@@ -535,7 +546,7 @@
   .price-card h3 { font-size: 1.1rem; }
   .price-tag { font-family: var(--font-display); font-size: 1.3rem; color: var(--lavender-deep); }
   .price-note { font-size: 0.78rem; color: var(--navy-soft); margin-left: 0.5rem; }
-  
+
   .calculator { border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-soft); }
   .calc-title { font-size: 1.3rem; margin-bottom: 1.2rem; }
   .calc-label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--navy-soft); margin: 1rem 0 0.4rem; }
@@ -553,7 +564,7 @@
     outline: none;
   }
   textarea { resize: vertical; }
-  
+
   .addons { display: flex; flex-direction: column; gap: 0.6rem; }
   .addon {
     display: flex;
@@ -569,7 +580,7 @@
   .addon:hover { background: #E5E9F9; }
   .addon input { width: 17px; height: 17px; accent-color: var(--lavender-deep); }
   .addon em { font-style: normal; color: var(--navy-soft); font-size: 0.82rem; margin-left: 0.3rem; }
-  
+
   .calc-summary {
     margin-top: 1.4rem;
     border-top: 1px dashed var(--line);
@@ -588,7 +599,7 @@
     font-size: 1.15rem;
   }
   .summary-row.total strong { color: var(--lavender-deep); font-family: var(--font-display); }
-  
+
   /* ============================================================
      ORDER FORM
      ============================================================ */
@@ -621,7 +632,7 @@
   }
   .addons-form { flex-direction: row; flex-wrap: wrap; }
   .addons-form .addon { flex: 1 1 46%; }
-  
+
   .form-summary {
     margin-top: 1.8rem;
     padding: 1.2rem 1.4rem;
@@ -640,7 +651,7 @@
     color: var(--navy-soft);
     text-align: center;
   }
-  
+
   /* ============================================================
      GALLERY
      ============================================================ */
@@ -665,7 +676,7 @@
   }
   .filter-btn:hover { border-color: var(--lavender-deep); color: var(--navy); }
   .filter-btn.active { background: var(--grad-btn); color: #fff; border-color: transparent; }
-  
+
   .gallery-grid {
     max-width: 1150px;
     margin: 0 auto;
@@ -699,7 +710,7 @@
     font-weight: 700;
     color: var(--navy);
   }
-  
+
   /* ============================================================
      FAQ
      ============================================================ */
@@ -732,7 +743,7 @@
     font-size: 0.95rem;
   }
   .faq-item.open .faq-answer { max-height: 220px; padding: 0 1.6rem 1.4rem; }
-  
+
   /* ============================================================
      FOOTER
      ============================================================ */
@@ -766,7 +777,7 @@
     color: #A79ECB;
     text-align: center;
   }
-  
+
   /* ============================================================
      BACK TO TOP
      ============================================================ */
@@ -789,7 +800,7 @@
   }
   .back-to-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
   .back-to-top:hover { background: var(--grad-btn); color: #fff; }
-  
+
   /* ============================================================
      CHAT WIDGET
      ============================================================ */
@@ -807,7 +818,7 @@
     transition: transform 0.2s ease;
   }
   .chat-fab:hover { transform: scale(1.08) translateY(-2px); }
-  
+
   .chat-window {
     position: fixed;
     right: 1.5rem;
@@ -827,7 +838,7 @@
     transition: transform 0.25s ease, opacity 0.25s ease;
   }
   .chat-window.open { transform: translateY(0) scale(1); opacity: 1; pointer-events: auto; }
-  
+
   .chat-header {
     background: var(--grad-btn);
     color: #fff;
@@ -839,7 +850,7 @@
     font-family: var(--font-display);
   }
   .chat-close { color: #fff; font-size: 1.1rem; }
-  
+
   .chat-body {
     flex: 1;
     padding: 1rem;
@@ -859,7 +870,7 @@
   @keyframes msgIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
   .chat-msg.admin { background: var(--bg-alt); align-self: flex-start; border-bottom-left-radius: 4px; }
   .chat-msg.user { background: var(--grad-btn); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
-  
+
   .chat-quick { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.2rem; }
   .chat-quick button {
     text-align: left;
@@ -871,7 +882,7 @@
     transition: border-color 0.2s ease, background 0.2s ease;
   }
   .chat-quick button:hover { border-color: var(--lavender-deep); background: var(--bg-alt); }
-  
+
   .chat-input-row {
     display: flex;
     gap: 0.5rem;
@@ -892,7 +903,7 @@
     color: #fff;
     display: flex; align-items: center; justify-content: center;
   }
-  
+
   /* ============================================================
      MODALS
      ============================================================ */
@@ -911,7 +922,7 @@
     padding: 1.5rem;
   }
   .modal-overlay.open { opacity: 1; pointer-events: auto; }
-  
+
   .modal {
     background: #fff;
     border-radius: var(--radius-lg);
@@ -926,7 +937,7 @@
     overflow-y: auto;
   }
   .modal-overlay.open .modal { transform: scale(1) translateY(0); }
-  
+
   .modal-close {
     position: absolute;
     top: 1rem; right: 1rem;
@@ -938,7 +949,7 @@
     transition: background 0.2s ease;
   }
   .modal-close:hover { background: var(--lavender); }
-  
+
   .lightbox-modal { max-width: 560px; text-align: center; }
   .lightbox-art {
     width: 100%;
@@ -950,7 +961,7 @@
     margin-bottom: 1.2rem;
   }
   .lightbox-caption { color: var(--navy-soft); font-size: 0.95rem; }
-  
+
   .confirm-modal { text-align: center; }
   .confirm-icon { font-size: 3rem; margin-bottom: 0.6rem; }
   .confirm-modal h3 { font-size: 1.5rem; margin-bottom: 0.6rem; }
@@ -963,7 +974,7 @@
     margin-bottom: 1.2rem;
   }
   .confirm-note { font-size: 0.85rem; color: var(--navy-soft); margin-bottom: 1.3rem; }
-  
+
   /* ============================================================
      SCROLL REVEAL
      ============================================================ */
@@ -973,7 +984,7 @@
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-  
+
   /* ============================================================
      RESPONSIVE
      ============================================================ */
@@ -989,7 +1000,7 @@
     .pricing-layout { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: repeat(3, 1fr); }
   }
-  
+
   @media (max-width: 720px) {
     .nav-links { display: none; }
     .hamburger { display: flex; }
@@ -1004,7 +1015,7 @@
     .chat-fab { right: 1rem; bottom: 1rem; }
     .back-to-top { right: 1rem; bottom: 5.6rem; }
   }
-  
+
   @media (max-width: 460px) {
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
     .hero-title { font-size: 2.3rem; }
