@@ -320,54 +320,102 @@
   }
 
   /* hero art cluster */
-  .hero-art { position: relative; height: 420px; }
-  .art-card {
-    position: absolute;
-    width: 150px; height: 150px;
-    border-radius: var(--radius-lg);
-    background: var(--grad-card);
-    box-shadow: var(--shadow-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    animation: bob 6s ease-in-out infinite;
-  }
+  /* hero art showcase */
+.hero-art {
+  position: relative;
+  height: 540px;
+  isolation: isolate;
+}
 
-  /* Artwork images inside the floating cards */
-  .art-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: var(--radius-lg);
-    position: relative;
-    z-index: 2;
-  }
+/* panel latar: dotted grid + glow, gaya Laravel */
+.art-stage {
+  position: absolute;
+  inset: 0;
+  border-radius: 36px;
+  background:
+    radial-gradient(60% 50% at 70% 20%, rgba(201,182,238,.55), transparent 70%),
+    radial-gradient(50% 45% at 20% 90%, rgba(143,193,238,.45), transparent 70%),
+    linear-gradient(160deg, rgba(255,255,255,.65), rgba(255,255,255,.25));
+  border: 1px solid rgba(255,255,255,.8);
+  box-shadow: 0 40px 80px -40px rgba(80,60,140,.35), inset 0 1px 0 #fff;
+  overflow: hidden;
+  z-index: -1;
+}
+.art-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(42,38,80,.16) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 50%, #000 30%, transparent 100%);
+          mask-image: radial-gradient(70% 70% at 50% 50%, #000 30%, transparent 100%);
+}
 
-  .art-card.card-1 { top: 6%; left: 14%; animation-delay: 0s; }
-  .art-card.card-2 { top: 40%; right: 4%; width: 130px; height: 130px; animation-delay: 1.2s; }
-  .art-card.card-3 { bottom: 4%; left: 24%; width: 115px; height: 115px; animation-delay: 2.4s; }
+/* kartu karya: semua pakai bingkai & radius yang sama */
+.art-card {
+  position: absolute;
+  margin: 0;
+  translate: calc(var(--px, 0) * 1px) calc(var(--py, 0) * 1px);
+  transition: translate .25s ease-out, scale .35s ease;
+  animation: float 9s ease-in-out infinite;
+}
+.art-frame {
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  border-radius: 28px;
+  background: linear-gradient(160deg, #fff, #f1eafd);
+  box-shadow:
+    0 30px 50px -22px rgba(60,40,120,.45),
+    0 0 0 1px rgba(156,127,219,.18);
+}
+.art-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 22px;
+  display: block;
+}
+.art-card:hover { scale: 1.035; z-index: 6; }
 
-  .art-blob {
-    position: absolute;
-    inset: -14px;
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0.5;
-    filter: blur(2px);
-  }
-  .blob-a { background: var(--lavender); }
-  .blob-b { background: var(--blue); }
-  .blob-c { background: var(--pink); }
+.art-card.card-1 { top: 6%;  left: 5%;  width: 56%; aspect-ratio: 4/5; z-index: 2; animation-delay: 0s; }
+.art-card.card-2 { top: 26%; right: 4%; width: 40%; aspect-ratio: 3/4; z-index: 3; animation-delay: -3s; }
+.art-card.card-3 { bottom: 5%; left: 32%; width: 27%; aspect-ratio: 1/1; z-index: 4; animation-delay: -6s; }
 
-  .hero-swirl {
-    position: absolute;
-    width: 130px; height: 130px;
-    top: 45%; left: 40%;
-    color: var(--lavender-deep);
-    opacity: 0.55;
-  }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* chip kaca */
+.art-chip {
+  position: absolute;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .95rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.9);
+  box-shadow: 0 14px 28px -14px rgba(60,40,120,.4);
+  translate: calc(var(--px, 0) * 1px) calc(var(--py, 0) * 1px);
+  transition: translate .25s ease-out;
+  white-space: nowrap;
+}
+.art-chip b { font-family: var(--font-display); color: var(--lavender-deep); font-size: .95rem; }
+.art-chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--grad-btn); box-shadow: 0 0 0 4px rgba(156,127,219,.2); }
+
+.chip-style  { left: 10%; bottom: -14px; }
+.chip-rating { right: 2%; top: 7%; }
+.chip-count  { left: 0;   top: 52%; }
+.card-1 .chip-style { position: absolute; }
 
   @keyframes bob {
     0%, 100% { transform: translateY(0) rotate(-1.5deg); }
